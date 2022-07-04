@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <!-- TODO: Add multiple choice question here -->
+            <h3>What is the name of the largest ocean on earth?</h3>
+            <p id="incorrect"></p>
+            <p id="correct"></p>
+            <button class="wrong" id="southern">Southern Ocean</button>
+            <button class="wrong" id="indian">Indian Ocean</button>
+            <button class="wrong" id="atlantic">Atlantic Ocean</button>
+            <button class="wrong" id="artic">Artic Ocean</button>
+            <button class="right" id="pacific">Pacific Ocean</button>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>What is the capital of Switzerland?</h3>
+            <form action="#" id="form">
+                <input type="text" id="response">
+                <button id="submit">Submit</button>
+            </form>
+            <p id="good"></p>
+            <p id="bad"></p>
+            <!-- TODO: Add free response question here -->
+        </div>
+    </div>
+
+    <script>
+        // TODO: Add code to check answers to questions
+        const rightAnswer = document.querySelector('#pacific');
+        const wrongAnswer = document.querySelectorAll('.wrong');
+        const correct = document.querySelector('#correct');
+        const incorrect = document.querySelector('#incorrect');
+        const form = document.querySelector('#form');
+        const freeResp = document.querySelector('input');
+        const good = document.querySelector('#good');
+        const bad = document.querySelector('#bad');
+
+
+        //When correct answer is clicked, change color to green
+        rightAnswer.addEventListener('click', () => {
+            rightAnswer.style.backgroundColor = 'green';
+            correct.innerHTML = 'Correct!';
+        });
+
+        //When incorrect answer is clicked, change color to red
+        for (let i = 0; i < wrongAnswer.length; i++) {
+            wrongAnswer[i].addEventListener('click', () => {
+                wrongAnswer[i].style.backgroundColor = 'red';
+                incorrect.innerHTML = 'Incorrect!';
+            })};
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (freeResp.value === 'Bern') {
+                freeResp.style.backgroundColor = 'green';
+                good.innerHTML = 'Correct!';
+            } else {
+                freeResp.style.backgroundColor = 'red';
+                bad.innerHTML = 'Incorrect!';
+            }
+        })
+    </script>
+</body>
+
+</html>
