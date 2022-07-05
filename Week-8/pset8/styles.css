@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* #5A0301; */
+
+body {
+    background-color: #040308;
+    
+}
+
+/* Utilities */
+i {
+    color: #950204;
+    font-size: 1.4rem;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(#07060B, #111016);
+    height: 4rem;
+    width: 100vw;
+    position: fixed;
+    margin-bottom: 4rem;
+    z-index: 1;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar a {
+    padding: 1rem;
+}
+
+/* Main */
+.main {
+    background-image: url(img/Wine-6.jpg);
+    background-size: cover;
+    background-position: top;
+    min-height: 100vh;
+    color: #950204;
+}
+
+/* About */
+#nav-about i {
+    color: #f1b911;
+}
+
+.about { 
+    height: 100vh;
+    background: url(img/Wine-4.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.about .glass-morphism {
+    padding: 1rem;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f1b911;
+    /* Glass Morphism */
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.102);
+    border-radius: 16px;
+}
+
+.about h1,
+.about h2 {
+    text-align: center;
+    font-weight: lighter;
+}
+
+.about h1,
+.events h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+
+.about p {
+    text-align: justify;
+}
+
+/* Events */
+.events { 
+    height: 100vh;
+    background: url(img/Wine-7.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.events h1 {
+    color: #CEDCF3;
+}
+
+/* TO DO <a> */
+.events a {
+    text-decoration: none;
+    background-color: #CEDCF3;
+    padding: .5rem 1rem;
+    border-radius: 1.7rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #950204;
+}
+
+.events .btn {
+    background-color: #CEDCF3;
+    margin-top: 2rem;
+    border-radius: 2rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.row1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.img-grid {
+    max-height: 100%;
+    width: 100%;
+}
